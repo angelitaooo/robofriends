@@ -1,11 +1,12 @@
 import React from 'react';
 import Card from './Card';
 
-const CardList = (props) => {
-    const robots = props.robots;
+const CardList = ({robots}) => {
+    // const robots = props.robots;
     const cardArray = robots.map((user, i) => {
         return  (
             <Card 
+                key={i}
                 id={robots[i].id} 
                 name={robots[i].name}
                 email={robots[i].email} 
